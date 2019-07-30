@@ -10,7 +10,7 @@ screen 的作用总结下来大概有两个：
 
   程序员在进行开发、运维工作的时候，往往需要同时需要多个命令行窗口进行同时操作。利用这个工具就可以省去多开终端的麻烦，脱离鼠标仅仅使用键盘就能完成许多事情。
 
-  ![](/Users/yanyeming/Desktop/study-Linux/Linux_tools/01-screen/assets/01-screen-split.png)
+  ![](https://raw.githubusercontent.com/Mr-YYM/study-Linux/master/Linux_tools/01-screen/assets/01-screen-split.png)
 
 ### 相关功能与概念
 
