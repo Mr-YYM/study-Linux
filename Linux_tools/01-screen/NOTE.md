@@ -1,20 +1,33 @@
 ## screen 工具的使用
 
+screen 的作用总结下来大概有两个：
+
+- 保持程序在后台的运行
+
+  我们通常是通过 ssh 连接我们的云主机的，新手一开始会选择直接在 ssh 上运行一些程序。但是这样就会带来一个问题就是，当我们退出我们的 ssh 窗口的时候，我们的程序就会跟着停止，原因简单说就是因为我们的程序是运行在 `sshd /root@pts/[id]` 的子进程上的，当我们关闭 ssh 的时候，  `sshd /root@pts/[id]`  会自动终结，他连带的所有子进程自然就会结束。因此我们要在云主机上运行我们的程序就要另辟蹊径，一个简单的方法就是使用 screen 这个工具。将自己的程序运行在 screen session 下，关闭 ssh 连接，程序就不会自动结束了。具体的原理分析可以参看文章：[Linux 技巧：让进程在后台运行更可靠的几种方法](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/)
+
+- 辅助开发、运维的工具
+
+  程序员在进行开发、运维工作的时候，往往需要同时需要多个命令行窗口进行同时操作。利用这个工具就可以省去多开终端的麻烦，脱离鼠标仅仅使用键盘就能完成许多事情。
+
+  ![](/Users/yanyeming/Desktop/study-Linux/Linux_tools/01-screen/assets/01-screen-split.png)
+
 ### 相关功能与概念
 
 - session
+- detach
 
 这些命令按步骤学下去很容易理解
 
-### 相关命令
+### 操作命令
 
-| 命令                             | 操作             |
-| -------------------------------- | ---------------- |
-| screen -ls                       |                  |
-| screen -S [session name]         |                  |
-| screen -d [session name]         |                  |
-| screen -r [session name]         |                  |
-| screen -r [session name] -X quit | 删除一个 session |
+| 命令                             | 操作                               |
+| -------------------------------- | ---------------------------------- |
+| screen -ls                       | 列出当前所有的 session             |
+| screen -S [session name]         | 新建一个叫 session name 的 session |
+| screen -d [session name]         | detach 某个session                 |
+| screen -r [session name]         |                                    |
+| screen -r [session name] -X quit | 删除一个 session                   |
 
 ### 快捷键命令
 
