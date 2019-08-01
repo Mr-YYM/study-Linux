@@ -35,7 +35,7 @@ screen 的作用总结下来大概有两个：
 
 | 命令    | 操作                                                         |
 | ------- | ------------------------------------------------------------ |
-| C-a d   | 暂时中断会话 ➡️ screen 会提示：[detached from [id].[session name]] |
+| C-a d.  | 暂时中断会话 ➡️ screen 会提示：[detached from [id].[session name]] |
 | 🌟Tips   | 暂时中断之后，想要恢复就使用 screen -r [session name] 命令就可以恢复啦！！ |
 | C-a c   | 创建一个新的运行 shell 的窗口并切换到该窗口                  |
 | C-a p   | 切换到上一个窗口                                             |
@@ -48,3 +48,12 @@ screen 的作用总结下来大概有两个：
 | C-a Q   | 分屏后退出除当前窗口外的所有窗口                             |
 | C-a X   | 分屏后取消当前窗口                                           |
 | C-a k   | kill 掉当前窗口【c 命令创建的那个】，当最后一个也 kill 掉，整个 session 就会被删掉 |
+| C-a A   | 给 window 改名                                               |
+
+### 冒号命令
+
+| 命令                | 操作                   |
+| ------------------- | ---------------------- |
+| :sessionname [name] | 给 session 改名为 name |
+|                     |                        |
+
