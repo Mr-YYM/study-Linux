@@ -20,6 +20,7 @@
 - `tar.gz`文件解压
 
   https://blog.csdn.net/qq_38486203/article/details/80067744
+  https://www.cnblogs.com/cursorhu/p/5891699.html
 
 ## 常用命令
 
@@ -35,3 +36,23 @@
 | -------- | ---- |
 | ln -s    |      |
 
+### scp
+
+| 使用方法                             | 操作                                                         |
+| ------------------------------------ | ------------------------------------------------------------ |
+| 发送指定文件到服务器【别把冒号忘了】 | scp[本地文件的路径] [服务器用户名]@[服务器地址]:[服务器上存放文件的路径] |
+| 发送指定文件夹到服务器               | scp -r [本地文件的路径] [服务器用户名]@[服务器地址]:[服务器上存放文件的路径] |
+
+### ssh
+
+- 更方便的操作：使用 ssh [short name] 登陆主机 ➡️ 配置 .ssh/config 文件
+
+  ```she
+  vim .ssh/config
+  
+  Host [short name]
+  Hostname [host ip address]
+  User [host user name, root for example]
+  ```
+
+- 使用公钥密钥实现免密登陆
