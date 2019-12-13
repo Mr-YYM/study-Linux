@@ -78,7 +78,7 @@ https://zju.date/alpine-set-timezone/ docker apline 镜像修改时区
   wget https://github.com/rofl0r/proxychains-ng/archive/v4.14.tar.gz
   tar zxvf v4.14.tar.gz
   cd proxychains-ng-4.14
-  yum install gcc
+  yum install -y gcc
   ```
 
   这是源码包，需要我们编译安装。编译前需要修改一些 Makefile , 否则会有 bug，参考:https://github.com/rofl0r/proxychains-ng/issues/53
