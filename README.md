@@ -36,6 +36,8 @@ uname -r # 查看内核版本
 
 https://zju.date/alpine-set-timezone/ docker apline 镜像修改时区
 
+https://linuxize.com/post/how-to-set-or-change-timezone-on-centos-7/ 系统时区修改
+
 ### 文件解压缩
 
 - `tar.gz`文件解压
