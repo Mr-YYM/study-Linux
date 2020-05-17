@@ -139,7 +139,7 @@ https://linuxize.com/post/how-to-set-or-change-timezone-on-centos-7/ 系统时�
 
 - 更方便的操作：使用 ssh [short name] 登陆主机 ➡️ 配置 .ssh/config 文件
 
-  ```she
+  ```shell
   vim .ssh/config
   
   Host [short name]
@@ -148,3 +148,9 @@ https://linuxize.com/post/how-to-set-or-change-timezone-on-centos-7/ 系统时�
   ```
 
 - 使用公钥密钥实现免密登陆
+
+  ```shell
+  # 在本地机器上
+  ssh-keygen -t rsa -C "your E-mail" # 生成加密密钥
+  ssh-copy-id [hostname|root@....] # 输入密码后，发送公钥到远程主机
+  ```
